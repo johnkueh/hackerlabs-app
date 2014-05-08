@@ -1,0 +1,16 @@
+<div class="container text-center content">
+  <br>
+  <h1><%= fa_icon 'check-circle' %></h1>
+  <br>
+  <h5>Welcome to Hackerlabs</h5>
+  <h2><%= @user.name %></h2>
+  <br>
+  <h5>You have checked in here</h5>
+  <h2><%= pluralize(@user.check_in_count, 'time') %></h2>
+  <br>
+  <h5>You were last here</h5>
+  <h3><%= distance_of_time_in_words(@last_check_in, DateTime.now) %> ago</h3>
+  <br>
+  <h5># people checked in before you today</h5>
+  <h2><%= pluralize(@check_ins_before, 'person') %></h2>
+</div>

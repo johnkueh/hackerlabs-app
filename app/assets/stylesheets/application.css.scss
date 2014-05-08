@@ -1,15 +1,58 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+/* @variables */
+  @import "variables";
+/* @end */
+
+/* @default bootstrap components */
+  @import 'bootstrap';
+  @import "font-awesome";
+/* @end */
+
+/* @custom components */
+/* @end */
+
+html, body, .content, h2, form {
+  background: rgba(74,157,122,1.0);
+  color: white;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+.check-in-persons {
+  margin-top: 30px;
+}
+h5 {
+  color: rgba(255,255,255,0.5);
+}
+.auth {
+  padding: 30px;
+  background: rgba(74,157,122,1.0);
+}
+.auth h2 {
+  margin: 0;
+  padding: 0;
+}
+.auth form {
+  margin-top: 30px;
+  input[type=text],
+  input[type=email],
+  input[type=password] {
+    border: none;
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    color: black;
+  }
+}
+.auth .btn-submit {
+  display: block;
+  background: rgba(59, 181, 235, 1.0);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 100%;
+  font-weight: 800;
+  padding: 15px;
+  margin-top: 30px;
+}
